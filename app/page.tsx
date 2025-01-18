@@ -3,6 +3,10 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import Logo from './assets/images/hiddenTrack-logo_white.png';
+import unknownDateIcon from './assets/icons/unknownDate.svg';
+import selectedUnknownDateIcon from './assets/icons/unknownDateSelected.svg';
+import knownDateIcon from './assets/icons/knownDate.svg';
+import selectedKnownDateIcon from './assets/icons/knownDateSelected.svg';
 
 // importing Images
 import step1Image from './assets/images/step1Image.webp';
@@ -98,6 +102,17 @@ export default function Home() {
                         }, 400);
                       }}
                     >
+                      <Image
+                        src={
+                          subStepNumber1 === subStepsNumber1Data[1]
+                            ? selectedUnknownDateIcon
+                            : unknownDateIcon
+                        }
+                        width={24}
+                        height={24}
+                        alt='icon'
+                      />
+                      <br />
                       {subStepsNumber1Data[1]}
                     </div>
                     <div
@@ -113,6 +128,17 @@ export default function Home() {
                         }, 400);
                       }}
                     >
+                      <Image
+                        src={
+                          subStepNumber1 === subStepsNumber1Data[2]
+                            ? selectedUnknownDateIcon
+                            : unknownDateIcon
+                        }
+                        width={24}
+                        height={24}
+                        alt='icon'
+                      />
+                      <br />
                       {subStepsNumber1Data[2]}
                     </div>
                     <div
@@ -128,6 +154,17 @@ export default function Home() {
                         }, 400);
                       }}
                     >
+                      <Image
+                        src={
+                          subStepNumber1 === subStepsNumber1Data[3]
+                            ? selectedUnknownDateIcon
+                            : unknownDateIcon
+                        }
+                        width={24}
+                        height={24}
+                        alt='icon'
+                      />
+                      <br />
                       {subStepsNumber1Data[3]}
                     </div>
                     <div
@@ -143,6 +180,17 @@ export default function Home() {
                         }, 400);
                       }}
                     >
+                      <Image
+                        src={
+                          subStepNumber1 === subStepsNumber1Data[4]
+                            ? selectedKnownDateIcon
+                            : knownDateIcon
+                        }
+                        width={24}
+                        height={24}
+                        alt='icon'
+                      />
+                      <br />
                       {subStepsNumber1Data[4]}
                     </div>
                   </div>
@@ -151,7 +199,9 @@ export default function Home() {
                 <div className='subStepNumber2'>
                   <div>
                     <div className='subStepNumber2From'>Start Date</div>
-                    <input type='date' className='subStepNumber2StartDate' />
+                    <div>
+                      <input type='date' className='subStepNumber2StartDate' />
+                    </div>
                   </div>
                   <div>
                     <div className='subStepNumber2To'>End Date</div>

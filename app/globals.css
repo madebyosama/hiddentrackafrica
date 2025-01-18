@@ -91,6 +91,7 @@ body {
   flex: 0 0 calc(50% - 10px); /* 50% width minus half of gap */
   cursor: pointer;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
